@@ -76,7 +76,7 @@ GROUP BY lower(trim(email))
 HAVING COUNT(*) > 1;
 ```
 
-## Um passeio pela API
+## Estruturas de API
 
 Crie uma conta:
 
