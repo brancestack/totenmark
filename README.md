@@ -175,3 +175,8 @@ Os logs JSON exibidos durante `lein test` são as próprias requisições de int
 ## Limites conhecidos
 
 O rate limiting vive na memória do processo, e o SQLite foi escolhido pensando em uma única instância. Se o Totenmark crescer para vários servidores, esses dois pontos devem migrar, respectivamente, para algo compartilhado (como Redis ou o gateway) e para PostgreSQL. As imagens ainda são URLs externas; upload e armazenamento ficam para uma etapa posterior.
+
+
+## Considerações Finais
+
+Por gentileza, peço que o leitor tenha em mente que esse projeto é um ambiente de testes e aprendizados com a linguagem funcional "Clojure", caso tenha alguma sugestão ou alguma crítica, ficarei expressamente feliz de ouvir ;) !
