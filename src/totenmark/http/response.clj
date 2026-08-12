@@ -10,8 +10,12 @@
 (defn log-error
   [operation ^Throwable exception]
   (binding [*out* *err*]
-    (println (str "ERROR " operation ": "
-                  (.getName (class exception)) " - " (.getMessage exception)))))
+    (println (json/write-str
+              {:timestamp (str (java.time.Instant/now))
+               :level "error"
+               :event operation
+               :exception (.getName (class exception))
+               :message (.getMessage exception)}))))
 
 (defn failure
   [operation exception status message]

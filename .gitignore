@@ -4,6 +4,7 @@
 /.clj-kondo/.cache/
 /.clj-kondo/imports/
 /.lein-failures
+/.nrepl-port
 
 # Local databases
 /totenmark

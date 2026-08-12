@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Install Leiningen
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes leiningen
+
+      - name: Run tests
+        run: lein test
+
+      - name: Compile all namespaces
+        run: lein check

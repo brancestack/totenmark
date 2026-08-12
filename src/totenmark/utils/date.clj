@@ -2,5 +2,8 @@
 
 (defn now
   []
-  (.format (java.text.SimpleDateFormat. "yyyy/MM/dd hh:mm:ss")
-           (new java.util.Date)))
+  (str (java.time.Instant/now)))
+
+(defn after-seconds
+  [seconds]
+  (str (.plusSeconds (java.time.Instant/now) seconds)))
