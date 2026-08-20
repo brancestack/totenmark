@@ -1,6 +1,6 @@
 # Totenmark
 
-Totenmark é um pequeno marketplace para vender ou doar coisas que ainda têm vida útil. O projeto também é um espaço para explorar Clojure em um domínio real, com autenticação, catálogo, reservas e as inevitáveis regras de quem pode mexer em quê.
+Totenmark é um pequeno marketplace para vender ou doar coisas que ainda têm vida útil. O projeto também é um espaço para explorar Clojure em um domínio real, com autenticação, catálogo, reservas e as inevitáveis regras específicas.
 
 No momento, a intenção é manter um monólito simples e bem cuidado. Pedestal recebe as requisições, HoneySQL e `next.jdbc` cuidam do banco, e o SQLite segura o MVP sem pedir infraestrutura extra.
 
